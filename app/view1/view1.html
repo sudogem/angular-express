@@ -1,0 +1,28 @@
+<p>This is the partial for view 1.</p>
+
+<!--<div ng-app="myApp" ng-controller="MapCtrl">
+  <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+  <div id="map-canvas"></div>
+</div> -->
+
+
+  <div ng-app="myApp" ng-controller="View1Ctrl">
+<!--     Auto Complete Type: 
+    <select ng-model="types">
+      <option value="['geocode']">Geodode</option>
+      <option value="['establishment']">Establishment</option>
+      <option value="['address']">Address</option>
+    </select><br/> -->
+
+    Enter an address: <br/>
+    <input places-auto-complete id="pac-input" class="controls" type="text" placeholder="Search Box" ng-model="address" on-place-changed="placeChanged(place)" > <br/>
+    
+    <!-- <input places-auto-complete size=80 ng-model="address" xxx-component-restrictions="{country:'us'}" types="{{types}}" on-place-changed="placeChanged(place)" /> <br/> -->
+    <!-- <div ng-show="place">
+      Address = {{place.formatted_address}} <br/>
+      Location: {{place.geometry.location}}<br/>
+    </div>
+    address : {{address}} -->
+
+    <div id="map-canvas"></div>
+  </div>
